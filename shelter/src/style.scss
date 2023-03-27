@@ -325,6 +325,7 @@ html {
 // ! Section HELP
 .help {
   background-color: $color-white;
+  padding: 80px 0 103px 0;
 
   .container {
     display: flex;
@@ -369,7 +370,7 @@ html {
 
 .donation {
   background-color: $color-light-1;
-  padding: 87px 0 98px 0;
+  padding: 80px 0 100px 0;
 
   .container {
     display: flex;
@@ -378,6 +379,7 @@ html {
     .donation__img {
       height: 261px;
       margin-right: 30px;
+      margin-top: 10px;
     }
   }
 }
@@ -429,7 +431,8 @@ html {
 
 // !Footer
 .footer {
-  padding-top: 20px;
+  padding-top: 40px;
+
   .container {
     display: flex;
     justify-content: space-between;
@@ -452,10 +455,13 @@ html {
   @extend %georgia-normal;
   font-size: 2rem;
   color: $color-primary;
+  line-height: 115%;
+  letter-spacing: 0.06em;
 }
 
 .footer__contacts {
   max-width: 279px;
+  margin-bottom: 45px;
 
   .contacts__title,
   .contacts__email {
@@ -465,6 +471,7 @@ html {
 
 .footer__adresses {
   max-width: 302px;
+  margin-bottom: 45px;
 
   .adresses__title {
     margin-bottom: 34px;
