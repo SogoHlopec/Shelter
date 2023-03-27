@@ -47,6 +47,13 @@ module.exports = {
           filename: path.join("icons", "[name].[ext]"),
         },
       },
+      {
+        test: /\.(woff2?|eot|ttf|otf)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "fonts/[name].[ext]",
+        },
+      },
     ],
   },
   plugins: [
