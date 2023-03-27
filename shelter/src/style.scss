@@ -388,6 +388,9 @@ html {
     align-items: center;
     justify-content: space-evenly;
     border-radius: 9px;
+    @extend %georgia-normal;
+    color: $color-dark-l;
+    font-size: 2rem;
   }
 
   .donation__text {
