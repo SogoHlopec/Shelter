@@ -170,7 +170,7 @@ html {
 // !Section ABOUT
 .about {
   padding: 80px 0 100px 0;
-  background-color: #ffffff;
+  background-color: $color-white;
 }
 
 .about__content-wrap {
@@ -214,6 +214,7 @@ html {
 
 .pets {
   background-color: $color-light-1;
+  padding: 80px 0 100px 0;
 
   .container {
     display: flex;
@@ -238,7 +239,6 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 
   .slider__btn {
     width: 52px;
@@ -273,6 +273,7 @@ html {
 
 .slider__card {
   height: 435px;
+  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -302,6 +303,50 @@ html {
 
 .pets__btn {
   width: 260px;
-  margin-bottom: 100px;
 }
 
+// ! Section HELP
+.help {
+  background-color: $color-white;
+  padding: 80px 0 100px 0;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .help__title {
+      width: 308px;
+      margin-bottom: 60px;
+      text-align: center;
+      @extend %georgia-normal;
+      font-size: 3.5rem;
+    }
+
+    .help__content {
+      max-width: 1026px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 55px 120px;
+    }
+  }
+}
+
+.help__card {
+  height: 113px;
+  margin: 0;
+  text-align: center;
+
+  .help-card__icon {
+    margin-bottom: 30px;
+  }
+
+  .help-card__title {
+    @extend %georgia-normal;
+    font-size: 2rem;
+    color: $color-dark-l;
+  }
+}
+
+// !Section DONATION
