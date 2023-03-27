@@ -50,6 +50,16 @@ html {
   font-size: 1.7rem;
 }
 
+.section {
+  padding: 80px 0 100px 0;
+}
+
+.title-section {
+  @extend %georgia-normal;
+  font-size: 3.5rem;
+  color: $color-dark-l;
+}
+
 // !Header start
 .header-wrapper {
   max-width: 1280px;
@@ -169,7 +179,6 @@ html {
 
 // !Section ABOUT
 .about {
-  padding: 80px 0 100px 0;
   background-color: $color-white;
 }
 
@@ -192,9 +201,6 @@ html {
       width: 370px;
       margin: 0;
       margin-bottom: 25px;
-      @extend %georgia-normal;
-      font-size: 3.5rem;
-      color: $color-dark-l;
       line-height: 130%;
     }
 
@@ -214,7 +220,6 @@ html {
 
 .pets {
   background-color: $color-light-1;
-  padding: 80px 0 100px 0;
 
   .container {
     display: flex;
@@ -226,9 +231,6 @@ html {
       margin: 0;
       margin-bottom: 60px;
       text-align: center;
-      @extend %georgia-normal;
-      font-size: 3.5rem;
-      color: $color-dark-l;
     }
   }
 }
@@ -308,7 +310,6 @@ html {
 // ! Section HELP
 .help {
   background-color: $color-white;
-  padding: 80px 0 100px 0;
 
   .container {
     display: flex;
@@ -319,8 +320,6 @@ html {
       width: 308px;
       margin-bottom: 60px;
       text-align: center;
-      @extend %georgia-normal;
-      font-size: 3.5rem;
     }
 
     .help__content {
@@ -350,3 +349,53 @@ html {
 }
 
 // !Section DONATION
+
+.donation {
+  background-color: $color-light-1;
+
+  .container {
+    display: flex;
+    justify-content: center;
+
+    .donation__img {
+      margin-right: 30px;
+    }
+  }
+}
+
+.donation__content {
+  max-width: 380px;
+  height: 282px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .donation__title {
+    margin: 0;
+  }
+
+  .donation__subtitle {
+    margin: 0;
+    @extend %georgia-normal;
+    font-size: 1.5rem;
+    color: $color-dark-l;
+  }
+
+  .donation__btn {
+    max-width: 349px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 9px;
+  }
+
+  .donation__text {
+    margin: 0;
+    font-family: Arial;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #B2B2B2;
+  }
+}
