@@ -396,6 +396,60 @@ html {
     font-style: italic;
     font-weight: 400;
     font-size: 1.2rem;
-    color: #B2B2B2;
+    color: #b2b2b2;
   }
+}
+
+// !Footer
+.footer {
+  padding-top: 40px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.footer-title {
+  margin: 0;
+  @extend %georgia-normal;
+  color: $color-white;
+  font-size: 3.5rem;
+}
+
+.footer a {
+  margin-left: 20px;
+  text-decoration: none;
+  @extend %georgia-normal;
+  font-size: 2rem;
+  color: $color-primary;
+}
+
+.footer__contacts {
+  max-width: 278px;
+
+  .contacts__title,
+  .contacts__email {
+    margin-bottom: 40px;
+  }
+}
+
+.footer__adresses {
+  max-width: 302px;
+
+  .adresses__title{
+    margin-bottom: 34px;
+  }
+
+  .adresses__boston {
+    margin-bottom: 32px;
+  }
+}
+
+.contacts__email,
+.contacts__phone,
+.adresses__boston,
+.adresses__london {
+  display: flex;
+  align-items: center;
 }
