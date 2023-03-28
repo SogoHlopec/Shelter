@@ -15,6 +15,7 @@ $color-dark: #cdcdcd;
 $color-dark-l: #545454;
 $color-dark-xl: #4c4c4c;
 $color-dark-3x: #292929;
+$color-hover: #fddcc4;
 
 %georgia-normal {
   font-family: "Georgia";
@@ -31,6 +32,7 @@ $color-dark-3x: #292929;
 // !General
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -50,6 +52,11 @@ html {
   font-size: 1.7rem;
   line-height: 130%;
   letter-spacing: 0.06em;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #f7ae7a;
+  }
 }
 
 .section {
@@ -75,6 +82,13 @@ html {
   justify-content: space-between;
 
   .logo {
+    text-decoration: none;
+
+    &:hover {
+      transform: scale(0.9);
+      transition: 0.5s;
+    }
+
     .logo__title {
       margin: 0;
       margin-bottom: 10px;
@@ -122,11 +136,20 @@ html {
         font-size: 1.5rem;
         color: $color-dark;
         line-height: 160%;
+
+        &:hover {
+          cursor: pointer;
+          color: $color-light;
+        }
       }
 
       .nav__link_active {
         border-bottom: solid 3px $color-primary;
         color: $color-light;
+
+        &:hover {
+          cursor: default;
+        }
       }
     }
   }
@@ -263,6 +286,11 @@ html {
     justify-content: center;
     align-items: center;
 
+    &:hover {
+      cursor: pointer;
+      background-color: $color-hover;
+    }
+
     .btn-left {
       width: 14px;
       height: 6px;
@@ -293,6 +321,18 @@ html {
   align-items: center;
   background: $color-light;
   border-radius: 9px;
+
+  &:hover {
+    cursor: pointer;
+
+    .card__btn {
+      background-color: $color-hover;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
 
   .card__title {
     margin: 0;
@@ -405,7 +445,7 @@ html {
   }
 
   .donation__btn {
-    max-width: 349px;
+    width: 349px;
     height: 43px;
     display: flex;
     align-items: center;
@@ -433,6 +473,11 @@ html {
 .footer {
   padding-top: 40px;
 
+  a:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+
   .container {
     display: flex;
     justify-content: space-between;
@@ -449,7 +494,7 @@ html {
   letter-spacing: 0.06em;
 }
 
-.footer a {
+.footer .link {
   margin-left: 20px;
   text-decoration: none;
   @extend %georgia-normal;
