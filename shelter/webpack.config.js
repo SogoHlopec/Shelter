@@ -40,14 +40,14 @@ module.exports = {
         test: /\.(png|jpg|jpeg|gif)$/i,
         type: "asset/resource",
         generator: {
-          filename: path.join("images/[name].[ext]"),
+          filename: path.join("[name].[ext]"),
         },
       },
       {
         test: /\.svg$/,
         type: "asset/resource",
         generator: {
-          filename: path.join("icons/[name].[ext]"),
+          filename: path.join("[name].[ext]"),
         },
       },
       {
