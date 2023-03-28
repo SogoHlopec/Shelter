@@ -280,48 +280,59 @@ html {
 
 .pets__slider {
   width: 100%;
-  margin-bottom: 60px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 
-  .slider__btn {
-    width: 52px;
-    height: 52px;
-    border: 2px solid $color-primary;
-    border-radius: 100px;
-    background-color: $color-light-1;
+  .slider__btns-container {
+    width: 340px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
 
-    &:hover {
-      cursor: pointer;
-      background-color: $color-hover;
+    .slider__btn {
+      width: 52px;
+      height: 52px;
+      border: 2px solid $color-primary;
+      border-radius: 100px;
+      background-color: $color-light-1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @extend %georgia-normal;
+      font-size: 2rem;
+      line-height: 115%;
+      letter-spacing: 0.06em;
+      color: $color-dark-3x;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $color-hover;
+      }
     }
 
-    .btn-left {
-      width: 14px;
-      height: 6px;
-      background-image: url("../../assets/icons/arrow.svg");
+    .slider__btn_active {
+      background-color: $color-primary;
     }
 
-    .btn-right {
-      width: 14px;
-      height: 6px;
-      background-image: url("../../assets/icons/arrow.svg");
-      transform: rotate(180deg);
+    .slider__btn_inactive {
+      border-color: $color-dark;
+      color: $color-dark;
     }
   }
 
   .slider__cards {
-    width: 990px;
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 45px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 40px 30px;
+    justify-items: center;
   }
 }
 
 .slider__card {
+  width: 270px;
   height: 435px;
   margin: 0;
   display: flex;
@@ -365,8 +376,4 @@ html {
     line-height: 130%;
     letter-spacing: 0.06em;
   }
-}
-
-.pets__btn {
-  width: 260px;
 }
