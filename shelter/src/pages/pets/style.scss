@@ -216,6 +216,7 @@ html {
   .nav {
     display: flex;
     align-items: center;
+    margin-right: 2px;
 
     .nav__list {
       width: 100%;
@@ -313,20 +314,22 @@ html {
 
     .slider__btn_active {
       background-color: $color-primary;
+      pointer-events: none;
     }
 
     .slider__btn_inactive {
       border-color: $color-dark;
       color: $color-dark;
+      pointer-events: none;
     }
   }
 
   .slider__cards {
     width: 100%;
-    margin-bottom: 45px;
+    margin-bottom: 58px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    gap: 40px 30px;
+    gap: 30px 40px;
     justify-items: center;
   }
 }
@@ -388,7 +391,7 @@ html {
 }
 
 .footer {
-  padding-top: 40px;
+  padding-top: 41px;
 
   a:hover {
     transform: scale(1.1);
