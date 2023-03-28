@@ -1,0 +1,372 @@
+@import "../../styles/normalize.scss";
+
+@font-face {
+  font-family: "Georgia";
+  src: url("../../assets/fonts/georgia/Georgia-Bold.woff2") format("woff2"),
+    url("../../assets/fonts/georgia/Georgia-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Georgia";
+  src: url("../../assets/fonts/georgia/Georgia-Italic.woff2") format("woff2"),
+    url("../../assets/fonts/georgia/Georgia-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Georgia";
+  src: url("../../assets/fonts/georgia/Georgia-BoldItalic.woff2")
+      format("woff2"),
+    url("../../assets/fonts/georgia/Georgia-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Georgia";
+  src: url("../../assets/fonts/georgia/Georgia.woff2") format("woff2"),
+    url("../../assets/fonts/georgia/Georgia.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Arial";
+  src: url("../../assets/fonts/arial/Arial-Black.woff2") format("woff2"),
+    url("../../assets/fonts/arial/Arial-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Arial";
+  src: url("../../assets/fonts/arial/Arial-BoldItalicMT.woff2") format("woff2"),
+    url("../../assets/fonts/arial/Arial-BoldItalicMT.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Arial";
+  src: url("../../assets/fonts/arial/Arial-BoldMT.woff2") format("woff2"),
+    url("../../assets/fonts/arial/Arial-BoldMT.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Arial";
+  src: url("../../assets/fonts/arial/Arial-ItalicMT.woff2") format("woff2"),
+    url("../../assets/fonts/arial/Arial-ItalicMT.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Arial Narrow";
+  src: url("../../assets/fonts/arial/ArialNarrow-Bold.woff2") format("woff2"),
+    url("../../assets/fonts/arial/ArialNarrow-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Arial Narrow";
+  src: url("../../assets/fonts/arial/ArialNarrow.woff2") format("woff2"),
+    url("../../assets/fonts/arial/ArialNarrow.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Arial Narrow";
+  src: url("../../assets/fonts/arial/ArialNarrow-BoldItalic.woff2")
+      format("woff2"),
+    url("../../assets/fonts/arial/ArialNarrow-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Arial Narrow";
+  src: url("../../assets/fonts/arial/ArialNarrow-Italic.woff2") format("woff2"),
+    url("../../assets/fonts/arial/ArialNarrow-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Arial";
+  src: url("../../assets/fonts/arial/ArialMT.woff2") format("woff2"),
+    url("../../assets/fonts/arial/ArialMT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+$color-primary: #f1cdb3;
+$color-white: #ffffff;
+$color-light: #fafafa;
+$color-light-1: #f6f6f6;
+$color-dark: #cdcdcd;
+$color-dark-l: #545454;
+$color-dark-xl: #4c4c4c;
+$color-dark-3x: #292929;
+$color-hover: #fddcc4;
+
+%georgia-normal {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+}
+
+%arial-normal {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+}
+
+// !General
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.section {
+  padding: 80px 0 100px 0;
+}
+
+.title-section {
+  @extend %georgia-normal;
+  font-size: 3.5rem;
+  color: $color-dark-l;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+
+// !Header start
+.header-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: $color-white;
+}
+
+.header {
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    text-decoration: none;
+
+    &:hover {
+      transform: scale(0.9);
+      transition: 0.5s;
+    }
+
+    .logo__title {
+      margin: 0;
+      margin-bottom: 10px;
+      @extend %georgia-normal;
+      font-size: 3.2rem;
+      line-height: 110%;
+      color: $color-dark-l;
+      letter-spacing: 0.06em;
+    }
+
+    .logo__subtitle {
+      margin: 0;
+      margin-left: 4px;
+      @extend %arial-normal;
+      font-size: 1.3rem;
+      color: $color-dark-3x;
+      line-height: 15px;
+      letter-spacing: 0.1em;
+    }
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+
+    .nav__list {
+      width: 100%;
+      height: 27px;
+      display: flex;
+      margin: 0;
+      padding: 0;
+
+      .nav__item {
+        list-style-type: none;
+        margin-right: 35px;
+      }
+
+      .nav__item:last-child {
+        margin-right: 0;
+      }
+
+      .nav__link {
+        text-decoration: none;
+        @extend %arial-normal;
+        font-size: 1.5rem;
+        color: $color-dark-l;
+        line-height: 160%;
+
+        &:hover {
+          cursor: pointer;
+          color: $color-dark-3x;
+        }
+      }
+
+      .nav__link_active {
+        border-bottom: solid 3px $color-primary;
+        color: $color-dark-3x;
+
+        &:hover {
+          cursor: default;
+        }
+      }
+    }
+  }
+}
+// !Header stop
+
+// !Section PETS
+
+.pets {
+  background-color: $color-light-1;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .pets__title {
+      width: 400px;
+      margin: 0;
+      margin-bottom: 60px;
+      text-align: center;
+    }
+  }
+}
+
+.pets__slider {
+  width: 100%;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .slider__btn {
+    width: 52px;
+    height: 52px;
+    border: 2px solid $color-primary;
+    border-radius: 100px;
+    background-color: $color-light-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $color-hover;
+    }
+
+    .btn-left {
+      width: 14px;
+      height: 6px;
+      background-image: url("../../assets/icons/arrow.svg");
+    }
+
+    .btn-right {
+      width: 14px;
+      height: 6px;
+      background-image: url("../../assets/icons/arrow.svg");
+      transform: rotate(180deg);
+    }
+  }
+
+  .slider__cards {
+    width: 990px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.slider__card {
+  height: 435px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: $color-light;
+  border-radius: 9px;
+
+  &:hover {
+    cursor: pointer;
+
+    .card__btn {
+      background-color: $color-hover;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .card__title {
+    margin: 0;
+    font-size: 2rem;
+    @extend %georgia-normal;
+    color: $color-dark-l;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+  }
+
+  .card__btn {
+    width: 187px;
+    height: 52px;
+    margin-bottom: 30px;
+    border: 2px solid $color-primary;
+    border-radius: 100px;
+    background-color: $color-light;
+    @extend %georgia-normal;
+    color: $color-dark-3x;
+    font-size: 1.7rem;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+  }
+}
+
+.pets__btn {
+  width: 260px;
+}
