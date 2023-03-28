@@ -377,3 +377,77 @@ html {
     letter-spacing: 0.06em;
   }
 }
+
+// !Footer start
+.footer-dark-wrapper {
+  background: url("../../assets/images/noise_lines_transparent@2X.png"),
+    radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%),
+    #211f20;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer {
+  padding-top: 40px;
+
+  a:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.footer-title {
+  margin: 0;
+  @extend %georgia-normal;
+  color: $color-white;
+  font-size: 3.5rem;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+
+.footer .link {
+  margin-left: 20px;
+  text-decoration: none;
+  @extend %georgia-normal;
+  font-size: 2rem;
+  color: $color-primary;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+}
+
+.footer__contacts {
+  max-width: 279px;
+  margin-bottom: 45px;
+
+  .contacts__title,
+  .contacts__email {
+    margin-bottom: 40px;
+  }
+}
+
+.footer__adresses {
+  max-width: 302px;
+  margin-bottom: 45px;
+
+  .adresses__title {
+    margin-bottom: 34px;
+  }
+
+  .adresses__boston {
+    margin-bottom: 32px;
+  }
+}
+
+.contacts__email,
+.contacts__phone,
+.adresses__boston,
+.adresses__london {
+  display: flex;
+  align-items: center;
+}
