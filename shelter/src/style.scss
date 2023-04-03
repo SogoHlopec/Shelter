@@ -52,10 +52,11 @@ html {
   font-size: 1.7rem;
   line-height: 130%;
   letter-spacing: 0.06em;
+  transition: all 0.3s linear;
 
   &:hover {
     cursor: pointer;
-    background-color: #f7ae7a;
+    background-color: $color-hover;
   }
 }
 
@@ -83,10 +84,10 @@ html {
 
   .logo {
     text-decoration: none;
+    transition: all 0.3s linear;
 
     &:hover {
       transform: scale(0.9);
-      transition: 0.5s;
     }
 
     .logo__title {
@@ -136,10 +137,15 @@ html {
         font-size: 1.5rem;
         color: $color-dark;
         line-height: 160%;
+        transition: all 0.3s linear;
 
         &:hover {
           cursor: pointer;
           color: $color-light;
+        }
+
+        &:active {
+          border-bottom: solid 3px $color-primary;
         }
       }
 
@@ -285,24 +291,24 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.3s linear;
 
     &:hover {
       cursor: pointer;
       background-color: $color-hover;
+      border: none;
     }
+  }
 
-    .btn-left {
-      width: 14px;
-      height: 6px;
-      background-image: url("./assets/icons/arrow.svg");
-    }
+  .btn-left {
+    background-image: url("./assets/icons/arrow.svg");
+  }
 
-    .btn-right {
-      width: 14px;
-      height: 6px;
-      background-image: url("./assets/icons/arrow.svg");
-      transform: rotate(180deg);
-    }
+  .btn-right {
+    background-image: url("./assets/icons/arrow.svg");
+    transform: rotate(180deg);
   }
 
   .slider__cards {
@@ -321,12 +327,16 @@ html {
   align-items: center;
   background: $color-light;
   border-radius: 9px;
+  transition: all 0.3s linear;
 
   &:hover {
     cursor: pointer;
+    background: $color-white;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 
     .card__btn {
       background-color: $color-hover;
+      border: none;
 
       &:hover {
         cursor: pointer;
@@ -355,6 +365,7 @@ html {
     font-size: 1.7rem;
     line-height: 130%;
     letter-spacing: 0.06em;
+    transition: all 0.3s linear;
   }
 }
 
@@ -451,11 +462,15 @@ html {
     align-items: center;
     justify-content: space-evenly;
     border-radius: 9px;
-    @extend %georgia-normal;
-    color: $color-dark-l;
-    font-size: 2rem;
-    line-height: 115%;
-    letter-spacing: 0.06em;
+
+    a {
+      text-decoration: none;
+      @extend %georgia-normal;
+      font-size: 2rem;
+      line-height: 115%;
+      letter-spacing: 0.06em;
+      color: $color-dark-l;
+    }
   }
 
   .donation__text {
@@ -481,9 +496,12 @@ html {
 .footer {
   padding-top: 40px;
 
-  a:hover {
-    transform: scale(1.1);
-    transition: 0.5s;
+  a {
+    transition: all 0.3s linear;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   .container {
