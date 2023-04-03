@@ -39,6 +39,10 @@ html {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 40px;
+
+  @media screen and (max-width: 1279px) {
+    padding: 0 30px;
+  }
 }
 
 .btn {
@@ -112,12 +116,13 @@ html {
   }
 
   .nav {
+    max-width: 443px;
     display: flex;
     align-items: center;
 
     .nav__list {
       width: 100%;
-      height: 27px;
+      height: 24px;
       display: flex;
       margin: 0;
       padding: 0;
@@ -175,18 +180,30 @@ html {
 .start {
   padding-top: 180px;
 
+  @media screen and (max-width: 860px) {
+    padding-top: 150px;
+  }
+
   .start__content-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    @media screen and (max-width: 860px) {
+      flex-direction: column;
+    }
+
     .start__content {
-      max-width: 38.33%;
+      max-width: 460px;
       min-height: 322px;
       margin-bottom: 80px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
+      @media screen and (max-width: 860px) {
+        margin-bottom: 100px;
+      }
 
       .start__title {
         width: 67.39%;
@@ -207,13 +224,25 @@ html {
 
       .start__btn {
         width: 207px;
+
+        .btn {
+          width: 100%;
+        }
+
+        @media screen and (max-width: 860px) {
+          margin: 0 auto;
+        }
       }
     }
   }
 
-  .img-start__puppy {
-    max-width: 698px;
-    max-height: 728px;
+  .start__img-puppy {
+    width: 58.17%;
+
+    @media screen and (max-width: 860px) {
+      width: 80.37%;
+      margin-left: 140px;
+    }
   }
 }
 
@@ -223,22 +252,31 @@ html {
 }
 
 .about__content-wrap {
+  max-width: 850px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
 
   .about__img-pets {
     max-width: 300px;
     max-height: 408px;
-    margin-right: 120px;
   }
 
   .about__content {
     max-width: 430px;
     max-height: 380px;
 
+    @media screen and (max-width: 768px) {
+      margin-bottom: 80px;
+    }
+
     .about__title {
-      width: 370px;
+      width: 100%;
       margin: 0;
       margin-bottom: 25px;
     }
@@ -283,8 +321,9 @@ html {
   align-items: center;
 
   .slider__btn {
-    width: 52px;
+    min-width: 52px;
     height: 52px;
+    padding: 0;
     border: 2px solid $color-primary;
     border-radius: 100px;
     background-color: $color-light-1;
@@ -313,6 +352,7 @@ html {
 
   .slider__cards {
     width: 990px;
+    margin: 0 12px;
     display: flex;
     justify-content: space-between;
   }
@@ -369,6 +409,12 @@ html {
   }
 }
 
+.slider__card:last-child {
+  @media screen and (max-width: 980px) {
+    display: none;
+  }
+}
+
 .pets__btn {
   width: 260px;
 }
@@ -395,6 +441,12 @@ html {
       flex-wrap: wrap;
       justify-content: center;
       gap: 55px 120px;
+
+      @media screen and (max-width: 768px) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 55px 65px;
+      }
     }
   }
 }
@@ -424,13 +476,18 @@ html {
   padding: 80px 0 100px 0;
 
   .container {
+    max-width: 915px;
+    padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: 880px) {
+      flex-direction: column-reverse;
+    }
 
     .donation__img {
       height: 261px;
-      margin-right: 30px;
-      margin-top: 10px;
     }
   }
 }
@@ -441,6 +498,10 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media screen and (max-width: 880px) {
+    margin-bottom: 60px;
+  }
 
   .donation__title {
     margin: 0;
@@ -496,6 +557,11 @@ html {
 .footer {
   padding-top: 40px;
 
+  @media screen and (max-width: 940px) {
+  padding-top: 30px;
+
+  }
+
   a {
     transition: all 0.3s linear;
 
@@ -508,6 +574,11 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: 940px) {
+      flex-wrap: wrap;
+      padding: 0 64px;
+    }
   }
 }
 
@@ -559,4 +630,11 @@ html {
 .adresses__london {
   display: flex;
   align-items: center;
+}
+
+.footer__puppy {
+  @media screen and (max-width: 940px) {
+    margin: 0 auto;
+    padding-top: 15px;
+  }
 }
