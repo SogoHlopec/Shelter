@@ -157,10 +157,18 @@ html {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 40px;
+
+  @media screen and (max-width: 1279px) {
+    padding: 0 30px;
+  }
 }
 
 .section {
   padding: 80px 0 100px 0;
+
+  @media screen and (max-width: 768px) {
+    padding: 80px 0 76px 0;
+  }
 }
 
 .title-section {
@@ -279,6 +287,10 @@ html {
       margin: 0;
       margin-bottom: 60px;
       text-align: center;
+
+      @media screen and (max-width: 768px) {
+        margin-bottom: 30px;
+      }
     }
   }
 }
@@ -337,6 +349,11 @@ html {
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     gap: 30px 40px;
     justify-items: center;
+
+    @media screen and (max-width: 768px) {
+      max-width: 580px;
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -351,6 +368,12 @@ html {
   background: $color-light;
   border-radius: 9px;
   transition: all 0.3s linear;
+
+  @media screen and (max-width: 768px) {
+    &:nth-child(n + 7) {
+      display: none;
+    }
+  }
 
   &:hover {
     cursor: pointer;
@@ -403,6 +426,15 @@ html {
 
 .footer {
   padding-top: 41px;
+
+  @media screen and (max-width: 940px) {
+    padding-top: 28px;
+  }
+
+  @media screen and (max-width: 320px) {
+    padding-top: 30px;
+  }
+
   a {
     transition: all 0.3s linear;
 
@@ -415,6 +447,16 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: 940px) {
+      flex-wrap: wrap;
+      padding: 0 64px;
+    }
+
+    @media screen and (max-width: 716px) {
+      padding: 0 10px;
+      justify-content: center;
+    }
   }
 }
 
@@ -425,6 +467,11 @@ html {
   font-size: 3.5rem;
   line-height: 130%;
   letter-spacing: 0.06em;
+
+  @media screen and (max-width: 320px) {
+    font-size: 2.5rem;
+    text-align: center;
+  }
 }
 
 .footer .link {
@@ -441,9 +488,31 @@ html {
   max-width: 279px;
   margin-bottom: 45px;
 
+  @media screen and (max-width: 716px) {
+    margin-right: 10px;
+  }
+
+  @media screen and (max-width: 320px) {
+    margin-right: 0;
+    margin-bottom: 38px;
+  }
+
   .contacts__title,
   .contacts__email {
     margin-bottom: 40px;
+  }
+
+  .contacts__email {
+    @media screen and (max-width: 320px) {
+      margin-bottom: 37px;
+    }
+  }
+}
+
+.contacts__email,
+.contacts__phone {
+  @media screen and (max-width: 320px) {
+    justify-content: center;
   }
 }
 
@@ -451,12 +520,25 @@ html {
   max-width: 302px;
   margin-bottom: 45px;
 
+  @media screen and (max-width: 320px) {
+    margin-bottom: 40px;
+  }
+
   .adresses__title {
     margin-bottom: 34px;
+
+    @media screen and (max-width: 320px) {
+      width: 270px;
+      margin: 0 auto 40px;
+    }
   }
 
   .adresses__boston {
     margin-bottom: 32px;
+
+    @media screen and (max-width: 320px) {
+      margin-bottom: 37px;
+    }
   }
 }
 
@@ -466,4 +548,17 @@ html {
 .adresses__london {
   display: flex;
   align-items: center;
+}
+
+.footer__puppy {
+  @media screen and (max-width: 940px) {
+    margin: 0 auto;
+    padding-top: 15px;
+  }
+
+  @media screen and (max-width: 320px) {
+    width: 260px;
+    height: 269px;
+    padding-top: 0;
+  }
 }
