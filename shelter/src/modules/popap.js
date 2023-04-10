@@ -22,14 +22,11 @@ const getDataPet = (namePet) => {
   }
 };
 
-slider.addEventListener("click", (event) => {
-  const namePet = getNamePet(event);
-  const pet = getDataPet(namePet);
-
+const renderPopap = (pet) => {
   const html = `
          <div class="wrapper-popap">
           <div class="popap">
-            <div class="popap__
+            <div class="popap__close-icon"></div>
             <img src="${pet.img}" alt="${pet.name}" class="popap__img" />
             <div class="popap__content">
               <h3 class="popap__title">${pet.name}</h3>
@@ -52,5 +49,21 @@ slider.addEventListener("click", (event) => {
         </div>
 `;
   section.insertAdjacentHTML("beforeend", html);
+};
+
+slider.addEventListener("click", (event) => {
+  const namePet = getNamePet(event);
+  const pet = getDataPet(namePet);
+  renderPopap(pet);
   document.body.style.overflow = "hidden";
+
+  section.querySelector(".wrapper-popap").addEventListener("click", (event) => {
+    if (
+      event.target.classList.contains("popap__close-icon") ||
+      event.target.classList.contains("wrapper-popap")
+    ) {
+      section.removeChild(section.querySelector(".wrapper-popap"));
+      document.body.style.overflow = "";
+    }
+  });
 });
