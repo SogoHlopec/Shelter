@@ -595,6 +595,12 @@ html {
   justify-content: center;
   align-items: center;
   background-color: rgba(41, 41, 41, 0.6);
+  transition: 0.5s all linear;
+  transform: scale(0);
+}
+
+.popap_active {
+  transform: scale(100%);
 }
 
 .popap {
