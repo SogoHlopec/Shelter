@@ -1,5 +1,5 @@
 import "./index.html";
 import "./style.scss";
-console.log(`
-Все пункты выполнены. Балл 100/100.
-`);
+import "./modules/burger";
+import "./modules/popap"
+alert("Пожалуйста, проверьте работу в последний день. Я ещё доделаю функционал")

@@ -139,17 +139,6 @@ html {
     display: flex;
     align-items: center;
 
-    .nav__burger {
-      width: 30px;
-      height: 22px;
-      background-image: url(./assets/icons/burger-menu.svg);
-      display: none;
-
-      @media screen and (max-width: 690px) {
-        display: block;
-      }
-    }
-
     .nav__list {
       width: 100%;
       height: 24px;
@@ -157,7 +146,7 @@ html {
       margin: 0;
       padding: 0;
 
-      @media screen and (max-width: 690px) {
+      @media screen and (max-width: 767px) {
         display: none;
       }
 
@@ -169,35 +158,107 @@ html {
       .nav__item:last-child {
         margin-right: 0;
       }
-
-      .nav__link {
-        text-decoration: none;
-        @extend %arial-normal;
-        font-size: 1.5rem;
-        color: $color-dark;
-        line-height: 160%;
-        transition: all 0.3s linear;
-
-        &:hover {
-          cursor: pointer;
-          color: $color-light;
-        }
-
-        &:active {
-          border-bottom: solid 3px $color-primary;
-        }
-      }
-
-      .nav__link_active {
-        border-bottom: solid 3px $color-primary;
-        color: $color-light;
-
-        &:hover {
-          cursor: default;
-        }
-      }
     }
   }
+}
+
+.nav__link {
+  text-decoration: none;
+  @extend %arial-normal;
+  font-size: 1.5rem;
+  color: $color-dark;
+  line-height: 160%;
+  transition: all 0.3s linear;
+  padding-bottom: 5px;
+
+  &:hover {
+    cursor: pointer;
+    color: $color-light;
+  }
+
+  &:active {
+    border-bottom: solid 3px $color-primary;
+  }
+}
+
+.nav__link_active {
+  border-bottom: solid 3px $color-primary;
+  color: $color-light;
+
+  &:hover {
+    cursor: default;
+  }
+}
+
+.nav__burger-icon {
+  width: 30px;
+  height: 22px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 10;
+  transition: 0.5s all linear;
+  cursor: pointer;
+
+  .burger__line {
+    border-bottom: 3px solid $color-primary;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+  }
+}
+
+.burger-icon_active {
+  transform: rotate(90deg);
+}
+
+.overlay_active::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(41, 41, 41, 0.6);
+  z-index: 0;
+}
+
+.burger__menu {
+  width: 320px;
+  height: 100vh;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  transition: 0.5s all linear;
+  background: $color-dark-3x;
+  justify-content: center;
+  align-items: center;
+
+  .nav__burger-list {
+    height: 327px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .nav__item {
+      list-style-type: none;
+    }
+
+    .nav__link {
+      font-size: 3.2rem;
+    }
+  }
+}
+
+.burger__menu_active {
+  transform: translateX(0);
 }
 // !Header stop
 
@@ -521,6 +582,104 @@ html {
 
 .pets__btn {
   width: 260px;
+}
+
+// !Popap pet
+.wrapper-popap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(41, 41, 41, 0.6);
+}
+
+.popap {
+  position: relative;
+  max-width: 900px;
+  margin: 0 40px;
+  display: flex;
+  background-color: $color-light;
+  border-radius: 9px;
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+
+  .popap__close-icon {
+    width: 52px;
+    height: 52px;
+    position: absolute;
+    top: -52px;
+    right: -42px;
+    border: 2px solid $color-primary;
+    border-radius: 100px;
+    background-image: url(./assets/icons/x.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.3s all linear;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(80%);
+    }
+  }
+
+  .popap__img {
+    max-width: 500px;
+    height: 500px;
+  }
+
+  .popap__content {
+    @extend %georgia-normal;
+    letter-spacing: 0.06em;
+    padding: 50px 20px 0 29px;
+
+    .popap__title {
+      font-size: 3.5rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      line-height: 130%;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+
+    .popap__subtitle {
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 115%;
+      letter-spacing: 0.06em;
+      margin: 0;
+      margin-bottom: 42px;
+    }
+
+    .popap__text {
+      margin: 0;
+      margin-bottom: 45px;
+      letter-spacing: 0.06em;
+    }
+
+    .popap__stats {
+      margin: 0;
+      padding: 0;
+      padding-left: 15px;
+    }
+
+    .stats__item {
+      letter-spacing: 0.06em;
+      margin-bottom: 10px;
+    }
+
+    .popap__text,
+    .stats__item {
+      font-size: 1.5rem;
+      line-height: 110%;
+    }
+
+    .stats__item::marker {
+      color: $color-primary;
+    }
+  }
 }
 
 // ! Section HELP
