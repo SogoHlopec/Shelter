@@ -584,6 +584,77 @@ html {
   width: 260px;
 }
 
+// !Popap pet
+.wrapper-popap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(41, 41, 41, 0.6);
+}
+
+.popap {
+  max-width: 900px;
+  margin: 0 40px;
+  display: flex;
+  background-color: $color-light;
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+
+  .popap__img {
+    max-width: 500px;
+    height: 500px;
+  }
+
+  .popap__content {
+    @extend %georgia-normal;
+    letter-spacing: 0.06em;
+    padding: 50px 20px 88px 29px;
+
+    .popap__title {
+      font-size: 3.5rem;
+      line-height: 130%;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+
+    .popap__subtitle {
+      font-size: 2rem;
+      line-height: 115%;
+      margin: 0;
+      margin-bottom: 40px;
+    }
+
+    .popap__text {
+      margin: 0;
+      margin-bottom: 40px;
+    }
+
+    .popap__stats {
+      margin: 0;
+      padding: 0;
+      padding-left: 15px;
+    }
+
+    .stats__item {
+      margin-bottom: 10px;
+    }
+
+    .popap__text,
+    .stats__item {
+      font-size: 1.5rem;
+      line-height: 110%;
+    }
+
+    .stats__item::marker {
+      color: $color-primary;
+    }
+  }
+}
+
 // ! Section HELP
 .help {
   background-color: $color-white;
