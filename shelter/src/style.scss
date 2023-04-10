@@ -142,11 +142,16 @@ html {
     .nav__burger {
       width: 30px;
       height: 22px;
-      background-image: url(./assets/icons/burger-menu.svg);
       display: none;
+      flex-direction: column;
+      justify-content: space-between;
 
-      @media screen and (max-width: 690px) {
-        display: block;
+      .burger__line {
+        border-bottom: 2px solid $color-primary;
+      }
+
+      @media screen and (max-width: 767px) {
+        display: flex;
       }
     }
 
@@ -157,7 +162,7 @@ html {
       margin: 0;
       padding: 0;
 
-      @media screen and (max-width: 690px) {
+      @media screen and (max-width: 767px) {
         display: none;
       }
 
