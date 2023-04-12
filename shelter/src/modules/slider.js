@@ -78,24 +78,54 @@ wrapperCards.append(renderCards(arrCards.past, dataPets, "beforeend"));
 const slider = document.querySelector(".slider");
 const btnRight = slider.querySelector(".btn-right");
 const btnLeft = slider.querySelector(".btn-left");
-console.log(arrCards);
+let isEvent = false;
 
 const moveRight = () => {
+  if (isEvent) return;
+  isEvent = true;
   arrCards.past.length = 0;
   copyClearArr(arrCards.curr, arrCards.past);
   copyClearArr(arrCards.next, arrCards.curr);
   initNextArr(arrCards.next, arrCards.curr, COUNT_INITIAL_CARDS, MAX_INDEX);
-  wrapperCards.innerHTML = "";
-  wrapperCards.append(renderCards(arrCards.curr, dataPets, "beforeend"));
+
+  const currSlides = document.querySelectorAll(".slider__cards");
+  currSlides[0].style.left = 0;
+  const widthOffset = currSlides[0].offsetWidth;
+  const newSlide = renderCards(arrCards.curr, dataPets, "beforeend");
+  newSlide.style.left = widthOffset + "px";
+  wrapperCards.append(newSlide);
+  setTimeout(() => {
+    currSlides[0].style.left = -(widthOffset + 10) + "px";
+    newSlide.style.left = 0;
+    setTimeout(() => {
+      currSlides[0].remove();
+      isEvent = false;
+    }, 1000);
+  }, 100);
 };
 
 const moveLeft = () => {
+  if (isEvent) return;
+  isEvent = true;
   arrCards.next.length = 0;
   copyClearArr(arrCards.curr, arrCards.next);
   copyClearArr(arrCards.past, arrCards.curr);
   initNextArr(arrCards.past, arrCards.curr, COUNT_INITIAL_CARDS, MAX_INDEX);
-  wrapperCards.innerHTML = "";
-  wrapperCards.append(renderCards(arrCards.curr, dataPets, "beforeend"));
+
+  const currSlides = document.querySelectorAll(".slider__cards");
+  currSlides[0].style.left = 0;
+  const widthOffset = currSlides[0].offsetWidth;
+  const newSlide = renderCards(arrCards.curr, dataPets, "afterbegin");
+  newSlide.style.left = -(widthOffset + 10) + "px";
+  wrapperCards.prepend(newSlide);
+  setTimeout(() => {
+    currSlides[0].style.left = widthOffset + "px";
+    newSlide.style.left = 0;
+    setTimeout(() => {
+      currSlides[0].remove();
+      isEvent = false;
+    }, 1000);
+  }, 100);
 };
 
 btnRight.addEventListener("click", moveRight);

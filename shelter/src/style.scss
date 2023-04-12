@@ -504,10 +504,18 @@ html {
     }
   }
 
-  .wrapper-cards {
-    width: 990px;
-    overflow: hidden;
+  .wrapper-slide {
     display: flex;
+    overflow: hidden;
+    width: 990px;
+    height: 435px;
+    position: relative;
+  }
+
+  .wrapper-cards {
+    width: 100%;
+    display: flex;
+    position: relative;
   }
 
   .slider__cards {
@@ -515,6 +523,8 @@ html {
     margin: 0 12px;
     display: flex;
     justify-content: space-between;
+    position: absolute;
+    transition: all 1s ease;
 
     @media screen and (max-width: 725px) {
       justify-content: center;
