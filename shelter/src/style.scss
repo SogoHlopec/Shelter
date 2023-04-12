@@ -504,8 +504,14 @@ html {
     }
   }
 
-  .slider__cards {
+  .wrapper-cards {
     width: 990px;
+    overflow: hidden;
+    display: flex;
+  }
+
+  .slider__cards {
+    width: 100%;
     margin: 0 12px;
     display: flex;
     justify-content: space-between;
