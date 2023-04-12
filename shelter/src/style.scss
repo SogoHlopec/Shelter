@@ -236,7 +236,7 @@ html {
   transition: 0.5s all linear;
   background: $color-dark-3x;
   justify-content: center;
-  align-items: center;
+
 
   .nav__burger-list {
     height: 327px;
@@ -246,6 +246,7 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-top: 248px;
 
     .nav__item {
       list-style-type: none;
