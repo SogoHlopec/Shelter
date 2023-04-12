@@ -229,14 +229,13 @@ html {
   width: 320px;
   height: 100vh;
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   transform: translateX(100%);
   transition: 0.5s all linear;
   background: $color-dark-3x;
   justify-content: center;
-
 
   .nav__burger-list {
     height: 327px;
