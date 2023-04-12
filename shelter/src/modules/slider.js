@@ -73,12 +73,6 @@ const renderCards = (arrIndexCards, dataPets, insertionPosition) => {
 const wrapperCards = document.querySelector(".wrapper-cards");
 wrapperCards.innerHTML = "";
 wrapperCards.append(renderCards(arrCards.past, dataPets, "beforeend"));
-// document
-//   .querySelector(".wrapper-cards")
-//   .append(renderCards(arrCards.curr, dataPets, "beforeend"));
-// document
-//   .querySelector(".wrapper-cards")
-//   .append(renderCards(arrCards.next, dataPets, "beforeend"));
 // !init starter cards end
 
 const slider = document.querySelector(".slider");

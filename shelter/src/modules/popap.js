@@ -1,7 +1,6 @@
 import dataPets from "../assets/data/pets.json";
 
 const section = document.getElementById("our-friends");
-const sliderCards = section.querySelector(".slider__cards");
 
 const getNamePet = (event) => {
   let namePet;
@@ -51,25 +50,31 @@ const renderPopap = (pet) => {
   section.insertAdjacentHTML("beforeend", html);
 };
 
-sliderCards.addEventListener("click", (event) => {
+section.addEventListener("click", (event) => {
   const namePet = getNamePet(event);
-  const pet = getDataPet(namePet);
-  renderPopap(pet);
-  document.body.style.overflow = "hidden";
-  setTimeout(() => {
-    section.querySelector(".wrapper-popap").classList.toggle("popap_active");
-  }, 100);
-
-  section.querySelector(".wrapper-popap").addEventListener("click", (event) => {
-    if (
-      event.target.classList.contains("popap__close-icon") ||
-      event.target.classList.contains("wrapper-popap")
-    ) {
+  if (namePet) {
+    const pet = getDataPet(namePet);
+    renderPopap(pet);
+    document.body.style.overflow = "hidden";
+    setTimeout(() => {
       section.querySelector(".wrapper-popap").classList.toggle("popap_active");
-      setTimeout(() => {
-        section.removeChild(section.querySelector(".wrapper-popap"));
-      }, 400);
-      document.body.style.overflow = "";
-    }
-  });
+    }, 100);
+
+    section
+      .querySelector(".wrapper-popap")
+      .addEventListener("click", (event) => {
+        if (
+          event.target.classList.contains("popap__close-icon") ||
+          event.target.classList.contains("wrapper-popap")
+        ) {
+          section
+            .querySelector(".wrapper-popap")
+            .classList.toggle("popap_active");
+          setTimeout(() => {
+            section.removeChild(section.querySelector(".wrapper-popap"));
+          }, 400);
+          document.body.style.overflow = "";
+        }
+      });
+  }
 });
