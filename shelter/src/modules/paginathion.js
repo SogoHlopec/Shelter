@@ -81,8 +81,6 @@ const checkWindowWidth = () => {
 };
 checkWindowWidth();
 
-// window.addEventListener("resize", checkWindowWidth());
-
 window.addEventListener("resize", checkWindowWidth);
 
 btnRight.addEventListener("click", () => {

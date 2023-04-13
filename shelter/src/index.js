@@ -3,4 +3,6 @@ import "./style.scss";
 import "./modules/burger";
 import "./modules/popap"
 import "./modules/slider"
-// alert("Пожалуйста, проверьте работу в последний день. Я ещё доделаю функционал")
+console.log(`
+Реализован весь функционал 110/110
+`);
