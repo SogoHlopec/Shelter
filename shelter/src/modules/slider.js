@@ -63,7 +63,8 @@ const renderCards = (arrIndexCards, dataPets, insertionPosition) => {
 // !init starter cards start
 const wrapperCards = document.querySelector(".wrapper-cards");
 wrapperCards.innerHTML = "";
-wrapperCards.append(renderCards(arrCards.past, dataPets, "beforeend"));
+wrapperCards.append(renderCards(arrCards.curr, dataPets, "beforeend"));
+console.log(arrCards);
 // !init starter cards end
 
 const slider = document.querySelector(".slider");
@@ -78,6 +79,8 @@ const moveRight = () => {
   copyClearArr(arrCards.curr, arrCards.past);
   copyClearArr(arrCards.next, arrCards.curr);
   initNextArr(arrCards.next, arrCards.curr, COUNT_INITIAL_CARDS, MAX_INDEX);
+
+  console.log(arrCards);
 
   const currSlides = document.querySelectorAll(".slider__cards");
   currSlides[0].style.left = 0;
