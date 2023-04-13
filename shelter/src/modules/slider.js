@@ -2,15 +2,6 @@ import dataPets from "../assets/data/pets.json";
 import getRandomNum from "./getRandomNum";
 
 const MAX_INDEX = dataPets.length;
-const WINDOW_INNER_WIDTH = document.documentElement.clientWidth;
-
-// const getCountInitialCard = (width) => {
-//   if (width <= 725) return 1;
-//   if (width <= 980) return 2;
-//   else return 3;
-// };
-
-// const COUNT_INITIAL_CARDS = getCountInitialCard(WINDOW_INNER_WIDTH);
 const COUNT_INITIAL_CARDS = 3;
 
 const initNextArr = (nextArr, currArr, countCards, maxRandomNum) => {

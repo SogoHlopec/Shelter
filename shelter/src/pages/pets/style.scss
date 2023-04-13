@@ -534,6 +534,19 @@ html {
   }
 }
 
+@keyframes init-page {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.init-page {
+  animation: init-page 1.5s linear 1;
+}
+
 // !Popap pet
 .wrapper-popap {
   position: fixed;
