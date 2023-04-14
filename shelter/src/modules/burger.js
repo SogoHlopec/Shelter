@@ -15,7 +15,7 @@ burgerIcon.addEventListener("click", () => {
   }, 100);
 });
 
-burgerMenu.addEventListener("click", () => {
+overlay.addEventListener("click", () => {
   document.body.style.overflow = "";
   burgerIcon.classList.toggle("burger-icon_active");
   burgerMenu.classList.toggle("burger__menu_active");
