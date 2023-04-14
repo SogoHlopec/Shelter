@@ -78,6 +78,7 @@ const checkWindowWidth = () => {
     dataPets,
     "beforeend"
   );
+  numberPage.textContent = currentPage;
 };
 checkWindowWidth();
 
