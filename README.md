@@ -22,3 +22,9 @@ Shelter is a two-page project that is adaptive and interactive. This project was
 * Pixel Perfect
 * Custom Slider
 * Pagination
+
+## Desktop
+![desktop](https://github.com/SogoHlopec/Shelter/blob/main/desktop.jpg)
+
+## Mobile
+![mobile](https://github.com/SogoHlopec/Shelter/blob/main/mobile.jpg)
